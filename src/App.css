@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+body {
+  background-image: url('./Shoe1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: rgb(160,205,224);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 40px;
+  width: 45%;
+}
+
+h1 {
+  font-size: 55px;
+  background: linear-gradient(to right, rgb(240, 132, 195), rgb(26, 9, 9));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+form {
+  display: flex;
+}
+
+input, .btnAdd {
+  padding: 17px;
+  border: none;
+  font-size: 20px;
+}
+
+input {
+  flex: 1;
+}
+
+.btnAdd {
+  background: linear-gradient(to right, rgb(240, 132, 195), black);
+  color: white;
+  font-weight: bolder;
+}
+
+.liStyle {
+  color: rgb(22, 190, 241);
+  padding: 13px;
+  background: linear-gradient(to left, rgb(145, 139, 139), black);
+  list-style-type: none;
+  font-weight: bold;
+  width: 102%;
+  margin-left: -40px;
+  font-size: 20px;
+  border-bottom: 2px solid #fff;
+}
+
+.crossed {
+  color: #fff;
+  text-decoration-line: line-through;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(240, 132, 195), black);
+  transition: all .5s ease;
+}
+
+.twoDeleteButtons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btnDeleteCrossed, .btnDeleteAll {
+  width: 40%;
+  margin: 10px;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+  background: linear-gradient(to right, rgb(240, 132, 195), black);
+  border: none;
+}
+
+.imgAndWordingPosition {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.imgAndWording {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+  background: linear-gradient(to left, rgb(235, 72, 167), black);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .YinYangStyle {
+    animation: spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+/* ------------------------------------------------------------- */
+
+@media all and (max-width: 1025px) {
+
+  .container {
+    width: 55%;
+  }
+  
+  h1 {
+    font-size: 45px;
+  }
+}
+
+/* ------------------------------------------------------------- */
+
+@media all and (max-width: 915px) {
+
+  .container {
+    width: 65%;
+  }
+  
+  h1 {
+    font-size: 42px;
+  }
+}
+
+/* ------------------------------------------------------------- */
+
+@media all and (max-width: 540px) {
+
+  .container {
+    margin: 5px 20px;
+    width: 80%;
+  }
+  
+  h1 {
+    font-size: 25px;
+  }
+
+  input, .btnAdd {
+    padding: 7px;
+    font-size: 15px;
+  }
+
+  .liStyle {
+    padding: 7px;
+    width: 107%;
+    font-size: 15px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .twoDeleteButtons {
+    margin-top: 0px;
+    justify-content: flex-start;
+  }
+  
+  .btnDeleteCrossed, .btnDeleteAll {
+    width: 50%;
+    margin: 0px;
+    padding: 7px;
+    font-size: 15px;
+  }
+
+  .btnDeleteCrossed {
+    margin-right: 5px;
+  }
+
+  .YinYangStyle {
+    width: 40px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
 }
